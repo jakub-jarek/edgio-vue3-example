@@ -6,7 +6,7 @@
       </div>
       <div class="flex flex-col items-start pt-5">
         <h2 class="text-[#FFFFFF75]">Showing {{ items ? items.length : '...' }} Results</h2>
-        <div class="mt-5 grid grid-cols-1 sm:grd-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
+        <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
           <router-link
             :key="item.path"
             v-for="item in items || fallbackData"
