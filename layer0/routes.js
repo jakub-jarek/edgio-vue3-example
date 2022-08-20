@@ -29,22 +29,25 @@ router.match('/l0-api/:path*', API_CACHE_HANDLER)
 // Image caching
 router.match('/l0-opt', IMAGE_CACHE_HANDLER)
 
-router.match('/', EDGE_CACHE_HANDLER)
-router.match('/about', EDGE_CACHE_HANDLER)
-router.match('/commerce', EDGE_CACHE_HANDLER)
-router.match('/product/:path', EDGE_CACHE_HANDLER)
-
 // Service Worker
 router.match('/service-worker.js', ({ serviceWorker }) => {
   serviceWorker('dist/service-worker.js')
 })
 
-router.match('/:path*', ({ serveStatic, renderWithApp }) => {
-  isProductionBuild()
-    ? serveStatic('dist/:path*', {
-        onNotFound: ({ serveStatic }) => serveStatic('dist/index.html'),
-      })
-    : renderWithApp()
+if (isProductionBuild()) {
+  router.match('/', EDGE_CACHE_HANDLER)
+  router.match('/about', EDGE_CACHE_HANDLER)
+  router.match('/commerce', EDGE_CACHE_HANDLER)
+  router.match('/product/:path', EDGE_CACHE_HANDLER)
+  router.fallback(({ serveStatic }) => {
+    serveStatic('dist/:path*', {
+      onNotFound: ({ serveStatic }) => serveStatic('dist/index.html'),
+    })
+  })
+}
+
+router.fallback(({ renderWithApp }) => {
+  renderWithApp()
 })
 
 export default router

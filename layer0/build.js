@@ -1,6 +1,6 @@
 const { join } = require('path')
-const esbuild = require('esbuild')
 const { exit } = require('process')
+const { buildSync } = require('esbuild')
 const { DeploymentBuilder } = require('@layer0/core/deploy')
 
 const appDir = process.cwd()
@@ -9,13 +9,13 @@ const builder = new DeploymentBuilder(appDir)
 module.exports = async function build(options) {
   try {
     builder.clearPreviousBuildOutput()
-    let command = 'npm run tailwindcss:build'
+    let command = 'npx tailwindcss -i ./src/input.css -o ./src/compiled/output.css'
     await builder.exec(command)
-    command = 'npm run build'
+    command = 'npx vue-cli-service build'
     await builder.exec(command)
-    esbuild.buildSync({
+    buildSync({
       entryPoints: [`${appDir}/sw/service-worker.js`],
-      outfile: `${builder.staticAssetsDir}/dist/service-worker.js`,
+      outfile: `${appDir}/dist/service-worker.js`,
       minify: true,
       bundle: true,
       define: {
