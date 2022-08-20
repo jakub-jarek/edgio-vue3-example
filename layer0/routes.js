@@ -34,20 +34,24 @@ router.match('/service-worker.js', ({ serviceWorker }) => {
   serviceWorker('dist/service-worker.js')
 })
 
+// Only compiled with 0 build / 0 deploy
 if (isProductionBuild()) {
+  // Cache but not in 0 dev mode
   router.match('/', EDGE_CACHE_HANDLER)
   router.match('/about', EDGE_CACHE_HANDLER)
   router.match('/commerce', EDGE_CACHE_HANDLER)
   router.match('/product/:path', EDGE_CACHE_HANDLER)
+  router.match('/commerce/:path', EDGE_CACHE_HANDLER)
+  // Serve all the files under dist folder as assets
+  router.static('dist')
+  // Serve rest of the routes via index.html
   router.fallback(({ serveStatic }) => {
-    serveStatic('dist/:path*', {
-      onNotFound: ({ serveStatic }) => serveStatic('dist/index.html'),
-    })
+    serveStatic('dist/index.html')
+  })
+} else {
+  router.fallback(({ renderWithApp }) => {
+    renderWithApp()
   })
 }
-
-router.fallback(({ renderWithApp }) => {
-  renderWithApp()
-})
 
 export default router
