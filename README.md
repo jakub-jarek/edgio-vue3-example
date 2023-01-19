@@ -1,14 +1,14 @@
-# Deploy Vue 3 example to Layer0
+# Deploy Vue 3 example to Edgio
 
-A demo deployment of Vue 3 app to Layer0.
+A demo deployment of Vue 3 app to Edgio.
 
 ## Demo
 
-https://layer0-docs-layer0-vue3-example-default.layer0-limelight.link
+https://edgio-docs-edgio-vue3-example-default.edgio-limelight.link
 
 ## Try It Now
 
-[![Deploy with Layer0](https://docs.layer0.co/button.svg)](https://app.layer0.co/deploy?repo=https://github.com/layer0-docs/layer0-vue3-example)
+[![Deploy with Edgio](https://docs.edg.io/button.svg)](https://app.layer0.co/deploy?repo=https://github.com/edgio-docs/edgio-vue3-example)
 
 ## Getting Started
 

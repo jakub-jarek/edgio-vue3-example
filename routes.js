@@ -6,7 +6,7 @@ import { API_CACHE_HANDLER, IMAGE_CACHE_HANDLER, EDGE_CACHE_HANDLER } from './ed
 export default new Router()
   /**
    * Pre-render the static home page
-   * More on static prerendering: https://docs.edgio.co/guides/static_prerendering
+   * More on static prerendering: https://docs.edg.io/guides/static_prerendering
    */
   .prerender(getPrerenderRequests)
   //   TODO: VALIDATE IF NEEDED
