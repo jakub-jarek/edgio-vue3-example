@@ -13,7 +13,8 @@
           <img loading="lazy" :src="relativizeURL(data.images[0].url)" class="h-auto w-full max-w-[600px]" />
         </div>
         <div class="mt-5 product-thumbnails flex flex-row gap-x-2 items-start overflow-x-scroll">
-          <img loading="lazy" :key="image.url" v-for="image in data.images" :src="relativizeURL(image.url)" class="h-[250px] w-auto hover:bg-white" />
+          <img loading="lazy" :key="image.url" v-for="image in data.images" :src="relativizeURL(image.url)"
+            class="h-[250px] w-auto hover:bg-white" />
         </div>
       </div>
       <div class="flex w-full lg:w-1/2 flex-col items-start px-10">
@@ -31,11 +32,13 @@
         </div>
         <button class="mt-5 w-full bg-black px-2 py-4 uppercase text-white">Add To Cart</button>
         <span class="mt-5 text-lg font-medium text-white">Care</span>
-        <span class="mt-2 font-light text-[#FFFFFF75]">This is a limited edition production run. Printing starts when the drop ends.</span>
+        <span class="mt-2 font-light text-[#FFFFFF75]">This is a limited edition production run. Printing starts when
+          the drop ends.</span>
         <div class="mt-5 h-[1px] w-full bg-[#FFFFFF30]"></div>
         <span class="mt-5 text-lg font-medium text-white">Details</span>
         <span class="mt-2 font-light text-[#FFFFFF75]">
-          This is a limited edition production run. Printing starts when the drop ends. Reminder: Bad Boys For Life. Shipping may take 10+ days due to
+          This is a limited edition production run. Printing starts when the drop ends. Reminder: Bad Boys For Life.
+          Shipping may take 10+ days due to
           COVID-19.
         </span>
         <div class="mt-5 h-[1px] w-full bg-[#FFFFFF30]"></div>
@@ -44,21 +47,23 @@
   </div>
 </template>
 
-<style scoped>
+<!-- TODO: this for some reason breaks everything ONLY on edgio deploy -->
+<!-- <style scoped>
 .product-thumbnails {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 .product-thumbnails::-webkit-scrollbar {
   display: none;
 }
-</style>
+</style> -->
 
 <script>
-import StarIcon from './StarIcon.vue'
-import HeartIcon from './HeartIcon.vue'
-import { relativizeURL } from '../../lib/helper'
-import StarIconOutline from './StarIconOutline.vue'
+import StarIcon from '../components/StarIcon.vue'
+import HeartIcon from '../components/HeartIcon.vue'
+import StarIconOutline from '../components/StarIconOutline.vue'
+import { relativizeURL } from '../utils'
 
 export default {
   name: 'Product',
@@ -73,10 +78,10 @@ export default {
     }
   },
   methods: {
-    relativizeURL: (url) => relativizeURL(url),
+    relativizeURL: relativizeURL,
     fetchData() {
       let link = window.location.origin
-      fetch(`${link}/l0-api/products/${this.$route.params.slug}`)
+      fetch(`${link}/edgio-api/products/${this.$route.params.slug}`)
         .then((res) => res.json())
         .then((res) => {
           this.data = res

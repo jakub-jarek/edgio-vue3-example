@@ -1,55 +1,35 @@
-# Deploy Vue 3 example to Layer0
+# replacement
 
-A demo deployment of Vue 3 app to Layer0.
+This template should help get you started developing with Vue 3 in Vite.
 
-## Demo
+## Recommended IDE Setup
 
-https://layer0-docs-layer0-vue3-example-default.layer0-limelight.link
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-## Try It Now
+## Customize configuration
 
-[![Deploy with Layer0](https://docs.layer0.co/button.svg)](https://app.layer0.co/deploy?repo=https://github.com/layer0-docs/layer0-vue3-example)
+See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Getting Started
+## Project Setup
 
-### Clone This Repo
-
-Use `git clone https://github.com/layer0-docs/layer0-vue3-example.git` to get the files within this repository onto your local machine.
-
-### Install dependencies
-
-On the command line, in the project root directory, run the following command:
-
-```bash
+```sh
 npm install
 ```
 
-### Run the Vue 3 app locally on Layer0
+### Compile and Hot-Reload for Development
 
-Run the Vue 3 app with the command:
-
-```bash
-npm run layer0:dev
+```sh
+npm run dev
 ```
 
-Load the site: http://127.0.0.1:3000
+### Compile and Minify for Production
 
-### Testing production build locally with Layer0
-
-You can do a production build of your app and test it locally using:
-
-```bash
-npm run layer0:build && npm run layer0:production
+```sh
+npm run build
 ```
 
-Setting --production runs your app exactly as it will be uploaded to the Layer0 cloud using serverless-offline.
+### Lint with [ESLint](https://eslint.org/)
 
-## Deploying to Layer0
-
-Deploying requires an account on Layer0. [Sign up here for free](https://app.layer0.co/signup). Once you have an account, you can deploy to Layer0 by running the following in the root folder of your project:
-
-```bash
-npm run layer0:deploy
+```sh
+npm run lint
 ```
-
-See [deploying](https://docs.layer0.co/guides/deploying) for more information.
