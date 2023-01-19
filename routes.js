@@ -9,10 +9,6 @@ export default new Router()
    * More on static prerendering: https://docs.edg.io/guides/static_prerendering
    */
   .prerender(getPrerenderRequests)
-  //   TODO: VALIDATE IF NEEDED
-  .match('/__xdn__/:path*', ({ redirect }) => {
-    redirect('/__edgio__/:path*', 301)
-  })
   .match('/edgio-api/:path*', API_CACHE_HANDLER)
   .match('/edgio-opt', IMAGE_CACHE_HANDLER)
   .match('/', EDGE_CACHE_HANDLER)
@@ -20,10 +16,5 @@ export default new Router()
   .match('/commerce', EDGE_CACHE_HANDLER)
   .match('/product/:path', EDGE_CACHE_HANDLER)
   .match('/commerce/:path', EDGE_CACHE_HANDLER)
-  .match('/service-worker.js', ({ serviceWorker }) => {
-    serviceWorker('dist/service-worker.js')
-  })
-  // Serve all the files under dist folder as assets
-  .static('dist')
   // default vue3 routes
   .use(vue3Routes)
