@@ -1,35 +1,55 @@
-# replacement
+# Deploy Vue 3 example to Layer0
 
-This template should help get you started developing with Vue 3 in Vite.
+A demo deployment of Vue 3 app to Layer0.
 
-## Recommended IDE Setup
+## Demo
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+https://layer0-docs-layer0-vue3-example-default.layer0-limelight.link
 
-## Customize configuration
+## Try It Now
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+[![Deploy with Layer0](https://docs.layer0.co/button.svg)](https://app.layer0.co/deploy?repo=https://github.com/layer0-docs/layer0-vue3-example)
 
-## Project Setup
+## Getting Started
 
-```sh
+### Clone This Repo
+
+Use `git clone https://github.com/edgio-docs/edgio-vue3-example.git` to get the files within this repository onto your local machine.
+
+### Install dependencies
+
+On the command line, in the project root directory, run the following command:
+
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Run the Vue 3 app locally on Edgio
 
-```sh
-npm run dev
+Run the Vue 3 app with the command:
+
+```bash
+npm run edgio:dev
 ```
 
-### Compile and Minify for Production
+Load the site: http://127.0.0.1:3000
 
-```sh
-npm run build
+### Testing production build locally with Edgio
+
+You can do a production build of your app and test it locally using:
+
+```bash
+npm run edgio:build && npm run edgio:production
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+Setting --production runs your app exactly as it will be uploaded to the Edgio cloud using serverless-offline.
 
-```sh
-npm run lint
+## Deploying to Edgio
+
+Deploying requires an account on Edgio. [Sign up here for free](https://app.layer0.co/signup). Once you have an account, you can deploy to Edgio by running the following in the root folder of your project:
+
+```bash
+npm run edgio:deploy
 ```
+
+See [deploying](https://docs.edg.io/guides/deploying) for more information.
