@@ -16,12 +16,12 @@
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
-    "@edgio/cli": "file:.yalc/@edgio/cli",
-    "@edgio/core": "file:.yalc/@edgio/core",
-    "@edgio/devtools": "6.0.7-next-1674143439-57f23d8.0",
-    "@edgio/prefetch": "file:.yalc/@edgio/prefetch",
-    "@edgio/vue": "6.0.7-next-1674143439-57f23d8.0",
-    "@edgio/vue-3": "file:.yalc/@edgio/vue-3",
+    "@edgio/cli": "6.0.7-next-1674152156-ccc059c.0",
+    "@edgio/core": "6.0.7-next-1674152156-ccc059c.0",
+    "@edgio/devtools": "6.0.7-next-1674152156-ccc059c.0",
+    "@edgio/prefetch": "6.0.7-next-1674152156-ccc059c.0",
+    "@edgio/vue": "6.0.7-next-1674152156-ccc059c.0",
+    "@edgio/vue-3": "6.0.7-next-1674152156-ccc059c.0",
     "@rushstack/eslint-patch": "^1.1.4",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue/eslint-config-prettier": "^7.0.0",
