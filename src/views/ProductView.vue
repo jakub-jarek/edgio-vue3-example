@@ -47,8 +47,7 @@
   </div>
 </template>
 
-<!-- TODO: this for some reason breaks everything ONLY on edgio deploy -->
-<!-- <style scoped>
+<style>
 .product-thumbnails {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -57,7 +56,7 @@
 .product-thumbnails::-webkit-scrollbar {
   display: none;
 }
-</style> -->
+</style>
 
 <script>
 import StarIcon from '../components/StarIcon.vue'
