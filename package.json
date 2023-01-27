@@ -8,20 +8,21 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "format": "prettier --write '**/*' --ignore-unknown",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
     "@edgio/rum": "^6.0.0",
+    "@edgio/vue": "^6.0.6",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
-    "@edgio/cli": "6.0.7-next-1674152156-ccc059c.0",
-    "@edgio/core": "6.0.7-next-1674152156-ccc059c.0",
-    "@edgio/devtools": "6.0.7-next-1674152156-ccc059c.0",
-    "@edgio/prefetch": "6.0.7-next-1674152156-ccc059c.0",
-    "@edgio/vue": "6.0.7-next-1674152156-ccc059c.0",
-    "@edgio/vue-3": "6.0.7-next-1674152156-ccc059c.0",
+    "@edgio/cli": "6.0.7-next-1674737066-0be86f8.0",
+    "@edgio/core": "6.0.7-next-1674737066-0be86f8.0",
+    "@edgio/devtools": "^6.0.6",
+    "@edgio/prefetch": "^6.0.6",
+    "@edgio/vue-3": "6.0.7-next-1674737066-0be86f8.0",
     "@rushstack/eslint-patch": "^1.1.4",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue/eslint-config-prettier": "^7.0.0",
