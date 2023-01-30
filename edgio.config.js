@@ -2,10 +2,7 @@
 // You should commit this file to source control.
 // Learn more about this file at https://docs.edg.io/guides/edgio_config
 module.exports = {
-  connector: '@edgio/vue-3',
-
-  // The name of the site in Edgio to which this app should be deployed.
-  // name: 'my-site-name',
+  connector: '@edgio/vue-cva',
 
   // The name of the team in Edgio to which this app should be deployed.
   // team: 'my-team-name',

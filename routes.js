@@ -1,5 +1,5 @@
 import { Router } from '@edgio/core'
-import { vue3Routes } from '@edgio/vue-3'
+import { vueRoutes } from '@edgio/vue-cva'
 import getPrerenderRequests from './edgio/getPrerenderRequests'
 import { API_CACHE_HANDLER, IMAGE_CACHE_HANDLER, EDGE_CACHE_HANDLER } from './edgio/cache'
 import { isProductionBuild } from '@edgio/core/environment'
@@ -15,7 +15,7 @@ const router = new Router()
   // Image caching
   .match('/edgio-opt', IMAGE_CACHE_HANDLER)
   // default vue3 routes
-  .use(vue3Routes)
+  .use(vueRoutes)
 
 // Only compiled with edgio build / edgio deploy
 if (isProductionBuild()) {
