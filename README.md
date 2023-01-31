@@ -4,7 +4,7 @@ A demo deployment of Vue 3 app to Edgio.
 
 ## Demo
 
-https://edgio-docs-edgio-vue3-example-default.edgio-limelight.link
+https://layer0-docs-layer0-vue3-example-default.layer0-limelight.link
 
 ## Try It Now
 
