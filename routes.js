@@ -19,7 +19,8 @@ const router = new Router()
 
 // Only compiled with edgio build / edgio deploy
 if (isProductionBuild()) {
-  router.match('/', EDGE_CACHE_HANDLER)
+  router
+    .match('/', EDGE_CACHE_HANDLER)
     .match('/about', EDGE_CACHE_HANDLER)
     .match('/commerce', EDGE_CACHE_HANDLER)
     .match('/product/:path', EDGE_CACHE_HANDLER)
