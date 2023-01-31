@@ -30,7 +30,7 @@ export default {
   name: 'About',
   data: () => ({
     showcases: [
-      `Edgio's Built-In Support for Vue 3`,
+      `Edgio's Built-In Support for Vue 3 and Vue 2`,
       'Static Pre-rendering with Edgio, to warm cache as soon as the app goes to production (or the cache is cleared)',
       '(Free) Real Time User Monitoring service offered by Edgio',
       'Edge and Browser caching of SSR page(s)',
