@@ -7,7 +7,6 @@ export const relativizeURL = (str) =>
 export const filterProducts = (data, filter) => {
   let temp = data
   if (filter) {
-    // TODO: this will cause issues / flicker -> fix it
     if (filter === 'trending') {
       temp.sort((a, b) => (Math.random() > 0.5 ? 1 : -1))
     } else if (filter === 'price-low-to-high') {
