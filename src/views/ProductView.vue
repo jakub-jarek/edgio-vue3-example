@@ -18,6 +18,7 @@
       </div>
       <div class="flex w-full lg:w-1/2 flex-col items-start px-10">
         <h1 class="mt-10 text-3xl font-bold text-white lg:mt-0">{{ data.name }}</h1>
+        <h2 v-html="data.description" class="text-md mt-5 font-light text-[#FFFFFF75]"></h2>
         <div class="mt-10 flex w-full flex-row justify-between">
           <div class="flex flex-row items-center space-x-1">
             <StarIcon class="h-[20px] w-[20px] text-[#FFFFFF75]" />
