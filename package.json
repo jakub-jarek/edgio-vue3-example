@@ -12,26 +12,10 @@
   },
   "name": "edgio-vue3-example",
   "dependencies": {
-    "@edgio/rum": "^6.0.0",
-    "vue": "^3.2.45",
-    "vue-router": "^4.1.6"
+
   },
   "devDependencies": {
-    "@edgio/cli": "^6.1.0",
-    "@edgio/core": "^6.1.0",
-    "@edgio/devtools": "^6.1.0",
-    "@edgio/prefetch": "^6.1.0",
-    "@edgio/vue": "^6.1.0",
-    "@edgio/vue-cva": "^6.1.0",
-    "@rushstack/eslint-patch": "^1.1.4",
-    "@vitejs/plugin-vue": "^4.0.0",
-    "@vue/eslint-config-prettier": "^7.0.0",
-    "autoprefixer": "^10.4.13",
-    "eslint": "^8.22.0",
-    "eslint-plugin-vue": "^9.3.0",
-    "prettier": "^2.7.1",
-    "tailwindcss": "^3.2.4",
-    "vite": "^4.0.0"
+
   },
   "browserslist": [
     "> 1%",
